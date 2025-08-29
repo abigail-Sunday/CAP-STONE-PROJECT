@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="workspace.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abiford University – People</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9fc;
+      color: #333;
+    }
+    
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    section h2 {
+      color: #2a3b8d;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #2a3b8d;
+    }
+    .card h3 {
+      margin: 8px 0 4px;
+      font-size: 1.2rem;
+      color: #2a3b8d;
+    }
+    .card p {
+      margin: 2px 0;
+      font-size: 0.95rem;
+    }
+    footer {
+      background: #2a3b8d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<header>
+   
+
+    <nav class="navbar">
+      <img src="./images/Abiglogo.png" alt="logo" class="img">
+      <ul class="navlink ">
+        <li><a href="workspace.html">Home</a></li>
+        
+        <li><a href="Admissions.html">Admissions</a></li>
+        
+        
+        <li><a href="Contact.html">Contact us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+
+        <li><a href="#faq">faq</a></li>
+      </ul>
+    </nav>
+    <script>
+  window.addEventListener("load", function() {
+    const header = document.querySelector("header");
+    document.body.style.paddingTop = header.offsetHeight + "px";
+  });
+</script>
+
+  </header>
+  
+  <main>
+    <!-- Leadership Section -->
+    <section>
+      <h2>Leadership</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="images/young-indian-asian-man-wearing-600w-2135489165.webp" alt="Vice Chancellor">
+          <h3>Prof. John Smith</h3>
+          <p>Vice Chancellor</p>
+          <p>Provides overall leadership and vision for Abiford University.</p>
+        </div>
+        <div class="card">
+          <img src="images/images.jpg" alt="Registrar">
+          <h3>Dr. Mary Johnson</h3>
+          <p>Registrar</p>
+          <p>Oversees admissions, academic records, and student administration.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section>
+      <h2>Faculty Members</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="images/9ad1223c-f4f2-4b52-a5ac-f5508a246b5c.png" alt="Professor">
+          <h3>Dr. Ahmed Bello</h3>
+          <p>Professor of Engineering</p>
+          <p>Specializes in renewable energy systems and sustainable technology.</p>
+        </div>
+        <div class="card">
+          <img src="images/bankers_senior_women.jpg" alt="Lecturer">
+          <h3>Dr. Grace Okafor</h3>
+          <p>Lecturer, Faculty of Law</p>
+          <p>Expert in constitutional law and human rights advocacy.</p>
+        </div>
+        <div class="card">
+          <img src="images/" alt="Lecturer">
+          <h3>Prof. David Lee</h3>
+          <p>Dean of Arts</p>
+          <p>Leads research in cultural studies and modern history.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Representatives -->
+    <section>
+      <h2>Student Representatives</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="images/gettyimages-1366624068-612x612.jpg" alt="Student Leader">
+          <h3>Sarah Williams</h3>
+          <p>President, Student Union</p>
+          <p>Represents student voices and organizes student activities.</p>
+        </div>
+        <div class="card">
+          <img src="images/gettyimages-1339470692-640x640.avif" alt="Student Rep">
+          <h3>Emeka Uche</h3>
+          <p>Sports Representative</p>
+          <p>Promotes athletics and coordinates university sports teams.</p>
+        </div>
+      </div>
+    </section>
+     
+    
+  </main>
+
+   <footer style="background:rgb(12, 46, 71);color:white; padding:3rem 5%; font-family:Arial, sans-serif;">
+      <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem;">
+
+        <!-- About -->
+        <div>
+          <h3 style="font-size:1.2rem; margin-bottom:1rem;">Abigford Open University</h3>
+          <p style="line-height:1.6; font-size:0.95rem;">
+             Abigford Open University is dedicated to removing the barriers that restrict access.
+  </p>
+          </p>
+          <p style="margin-top:1rem; font-size:0.9rem;">📞 +234 804 000 9003</p>
+          <p style="font-size:0.9rem;">📞+234 800 000 0000</p>
+          <p style="font-size:0.9rem;">✉️info@abigforduniversity.edu</p>
+          </p>
+        </div>
+
+        <!-- The University -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">The University</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">About Us</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Admissions</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Faculties</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Contact Us</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Gallery</p>
+          <p style="line-height:1.8; font-size:0.9rem;">FAQ</p>
+        </div>
+
+        <!-- Studying -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">Studying</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">Admission Requirements</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Direct Entry Requirements</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Inter-University Transfer</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Scholarship</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Donate</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Apply</p>
+        </div>
+
+        <!-- Digital Learning Tools -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">Digital Learning Tools</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">E-Library</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Learning Management System (LMS)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Business Administration (MBA)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Public Administration (MPA)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Information Technology (MIT)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Public Health (MPH)</p>
+        </div>
+
+        <!-- Faculties -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">Faculties</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Computing</p>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Management and Social Sciences</p>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Communication and Media Studies</p>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Allied Health Sciences</p>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div
+        style="text-align:center; margin-top:2rem; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.2); padding-top:1rem;">
+        
+        <p>© 2025. Abiford Education Services Limited. All rights reserved.</p>
+        <p>Terms & Conditions | Privacy Policy</p>
+      </div>
+    </footer>
+
+</body>
+</html>

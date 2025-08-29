@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="workspace.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abiford University – Admission</title>
+  <style>
+    .welcome {
+      margin-top: 200px;
+    }
+
+    .decision {
+      font-family: Arial, sans-serif;
+      background: #f9f9fc;
+      margin: 0;
+      padding: 0;
+      margin-top: 100px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      #0c2e47;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 6px;
+    }
+
+    ul {
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    button {
+      background: #0A2E5C;
+
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #1d285e;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0A2E5C;
+
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body class="decision">
+
+  <header>
+    <nav class="navbar">
+      <img src="./images/Abiglogo.png" alt="logo" class="img">
+      <ul class="navlink ">
+        <li><a href="workspace.html">Home</a></li>
+        
+        <li><a href="Admissions.html">Admissions</a></li>
+       
+        <li><a href="Contact.html">Contact us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main class="welcome">
+    <!-- Intro -->
+    <section>
+      <h2>Admission<a style="margin-right: 1rem;"></a>Admission<a style="margin-right: 1rem;"></a> Admission<a
+          style="margin-right: 1rem;"></a> Admission</h2>
+      <p>
+        At Abiford University, we welcome students who are passionate about learning, growth,
+        and contributing positively to society. Our admissions process is simple, transparent,
+        and student-focused.
+      </p>
+    </section>
+
+    <!-- Requirements -->
+    <section>
+      <h2>Admission Requirements</h2>
+      <ul>
+        <li>Completed application form</li>
+        <li>Academic transcripts and certificates</li>
+        <li>Proof of English proficiency (for international applicants)</li>
+        <li>Two passport-sized photographs</li>
+        <li>Valid identification (National ID or Passport)</li>
+      </ul>
+    </section>
+
+    <!-- Steps -->
+    <section>
+      <h2>Application Steps</h2>
+      <ol>
+        <li>Fill out the admission form online.</li>
+        <li>Upload all required documents.</li>
+        <li>Pay the non-refundable application fee.</li>
+        <li>Wait for confirmation and further instructions via email.</li>
+      </ol>
+    </section>
+
+    <!-- Form -->
+    <section>
+      <h2>Apply Now</h2>
+      <form id="admissionForm">
+        <div>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" required>
+        </div>
+        <div>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" required>
+        </div>
+        <div>
+          <label for="program">Program of Interest:</label>
+          <select id="program" required>
+            <option value="">-- Select Program --</option>
+            <option>Science</option>
+            <option>Engineering</option>
+            <option>Law</option>
+            <option>Arts</option>
+            <option>Management & Social Sciences</option>
+            <option>Education</option>
+          </select>
+        </div>
+        <div>
+          <label for="statement">Personal Statement:</label>
+          <textarea id="statement" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit Application</button>
+        <div class="message" id="formMessage"></div>
+      </form>
+    </section>
+  </main>
+
+  
+
+  <script>
+    const form = document.getElementById('admissionForm');
+    const message = document.getElementById('formMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Simulate submission
+      setTimeout(() => {
+        message.textContent = "✅ Your application was successfully submitted! Please check your email in 24 hours for updates.";
+        message.style.color = "green";
+        form.reset();
+      }, 1000);
+    });
+  </script>
+ <footer style="background:rgb(12, 46, 71);color:white; padding:3rem 5%; font-family:Arial, sans-serif;">
+      <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem;">
+
+        <!-- About -->
+        <div>
+          <h3 style="font-size:1.2rem; margin-bottom:1rem;">Abigford Open University</h3>
+          <p style="line-height:1.6; font-size:0.95rem;">
+             Abigford Open University is dedicated to removing the barriers that restrict access.
+  </p>
+          </p>
+          <p style="margin-top:1rem; font-size:0.9rem;">📞 +234 804 000 9003</p>
+          <p style="font-size:0.9rem;">📞+234 800 000 0000</p>
+          <p style="font-size:0.9rem;">✉️info@abigforduniversity.edu</p>
+          </p>
+        </div>
+
+        <!-- The University -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">The University</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">About Us</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Admissions</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Faculties</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Contact Us</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Gallery</p>
+          <p style="line-height:1.8; font-size:0.9rem;">FAQ</p>
+        </div>
+
+        <!-- Studying -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">Studying</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">Admission Requirements</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Direct Entry Requirements</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Inter-University Transfer</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Scholarship</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Donate</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Apply</p>
+        </div>
+
+        <!-- Digital Learning Tools -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">Digital Learning Tools</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">E-Library</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Learning Management System (LMS)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Business Administration (MBA)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Public Administration (MPA)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Information Technology (MIT)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Public Health (MPH)</p>
+        </div>
+
+        <!-- Faculties -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">Faculties</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Computing</p>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Management and Social Sciences</p>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Communication and Media Studies</p>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Allied Health Sciences</p>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div
+        style="text-align:center; margin-top:2rem; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.2); padding-top:1rem;">
+        
+        <p>© 2025. Abiford Education Services Limited. All rights reserved.</p>
+        <p>Terms & Conditions | Privacy Policy</p>
+      </div>
+    </footer>
+
+</body>
+
+</html>

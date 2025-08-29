@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abigford University — Certificate</title>
+  <style>
+    /* ----- Color tokens (match your site) ----- */
+    :root {
+      --brand: #09203f;   /* deep navy */
+      --accent: #ffd700;  /* gold */
+      --ink: #222;
+      --paper: #ffffff;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #e9eef5;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: var(--ink);
+    }
+
+    /* ----- Layout wrapper ----- */
+    .page {
+      max-width: 1123px; /* ~A4 width at 96dpi */
+      margin: 24px auto;
+      padding: 24px;
+    }
+
+    /* ----- Control panel (hidden when printing) ----- */
+    .controls {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
+      padding: 16px;
+      margin-bottom: 16px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .controls h2 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      color: var(--brand);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .controls label { font-size: .9rem; color: #333; }
+    .controls input { 
+      width: 100%;
+      padding: 10px 12px; 
+      border: 1px solid #cfd6e4; 
+      border-radius: 10px; 
+      outline: none;
+      font-size: .95rem; 
+      background: #f9fbff;
+    }
+    .actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      appearance: none;
+      border: 0; border-radius: 999px; padding: 10px 16px;
+      background: var(--brand); color: #fff; cursor: pointer;
+      font-weight: 600; letter-spacing: .2px;
+    }
+    .btn.secondary { background: #f1f3f8; color: #111; }
+
+    /* ----- Certificate canvas ----- */
+    .cert {
+      position: relative;
+      background: var(--paper);
+      border-radius: 18px;
+      padding: 48px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.1);
+      aspect-ratio: 1.414/1; /* A4 */
+      background-image: radial-gradient(circle at 50% -20%, rgba(255,215,0,.08), transparent 60%),
+                        radial-gradient(circle at -10% 110%, rgba(9,32,63,.07), transparent 40%);
+      overflow: hidden;
+    }
+
+    /* Ornamental border */
+    .cert:before, .cert:after {
+      content: "";
+      position: absolute; inset: 18px;
+      border-radius: 14px;
+      pointer-events: none;
+    }
+    .cert:before { border: 4px double var(--brand); }
+    .cert:after  { inset: 28px; border: 3px solid var(--accent); border-radius: 12px; }
+
+    /* Header */
+    .cert-head {
+      display: flex; align-items: center; gap: 16px;
+      justify-content: center; text-align: center;
+      margin-bottom: 16px;
+    }
+    .logo {
+      width: 68px; height: 68px; object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.1));
+    }
+    .school {
+      font-family: "Garamond", "Times New Roman", serif;
+      font-weight: 700; letter-spacing: .5px; color: var(--brand);
+      font-size: 1.6rem;
+    }
+    .subtitle { font-size: .95rem; color: #4b5563; margin-top: 2px; }
+
+    /* Title ribbon */
+    .ribbon {
+      margin: 14px auto 26px; width: max-content;
+      padding: 8px 18px; border-radius: 999px; color: #111;
+      background: linear-gradient(90deg, #fff5b7, #ffe07a);
+      border: 1px solid #f3c94a; font-weight: 700; letter-spacing: .3px;
+    }
+
+    .bigline { font-size: 2.1rem; text-align: center; margin: 10px 0 24px; color: #0d2240; }
+
+    .body { max-width: 820px; margin: 0 auto; text-align: center; font-size: 1.05rem; line-height: 1.6; }
+    .name {
+      display: inline-block; margin: 8px 6px; padding: 4px 12px;
+      border-bottom: 3px solid var(--accent); font-weight: 700; font-size: 1.6rem;
+    }
+    .program {
+      display: inline-block; padding: 0 8px; font-weight: 600; color: #0f3460;
+    }
+
+    /* Footer / signatures */
+    .footer {
+      position: absolute; left: 48px; right: 48px; bottom: 42px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: end;
+    }
+    .sigbox {
+      text-align: center; padding-top: 28px; position: relative;
+    }
+    .sigbox:before { content: ""; position: absolute; left: 10%; right: 10%; top: 0; height: 2px; background: #c0c6d4; }
+    .signame { font-weight: 700; }
+    .sigtitle { font-size: .9rem; color: #4b5563; }
+
+    /* Seal */
+    .seal {
+      position: absolute; right: 56px; bottom: 120px; width: 120px; height: 120px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, var(--accent), #fff 20%, var(--accent) 40%, #fff 60%, var(--accent) 80%, #fff 100%);
+      opacity: .14; pointer-events: none;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; padding: 0; }
+      .controls { display: none !important; }
+      .cert { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Controls (hidden on print) -->
+    <div class="controls">
+      <h2>Certificate Details</h2>
+      <div class="grid">
+        <label>
+          Recipient Name
+          <input id="inp-name" type="text" placeholder="e.g., John A. Doe" />
+        </label>
+        <label>
+          Award Title
+          <input id="inp-award" type="text" placeholder="e.g., Certificate of Completion" />
+        </label>
+        <label>
+          Program / Course
+          <input id="inp-program" type="text" placeholder="e.g., BSc Computer Science" />
+        </label>
+        <label>
+          Date (optional)
+          <input id="inp-date" type="date" />
+        </label>
+        <label>
+          Registrar / Dean Name
+          <input id="inp-sig1" type="text" placeholder="e.g., Dr. Ada Okon" />
+        </label>
+        <label>
+          Vice Chancellor / Provost Name
+          <input id="inp-sig2" type="text" placeholder="e.g., Prof. T. Mensah" />
+        </label>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="applyFields()">Apply Details</button>
+        <button class="btn secondary" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+    </div>
+
+    <!-- Certificate -->
+    <section class="cert" id="certificate">
+      <div class="cert-head">
+        <img class="logo" src="./images/Abiglogo.png" alt="Abigford University Logo" />
+        <div>
+          <div class="school">ABIGFORD UNIVERSITY</div>
+          <div class="subtitle">Calabar, Cross River State, Nigeria</div>
+        </div>
+      </div>
+
+      <div class="ribbon">Official Recognition</div>
+      <div class="bigline" id="award">Certificate of Achievement</div>
+
+      <div class="body">
+        This certifies that
+        <span class="name" id="student">Student Name</span>
+        has successfully completed the
+        <span class="program" id="program">Program / Course</span>
+        at Abigford University and is hereby awarded this certificate in recognition of outstanding performance and dedication.
+        <div style="margin-top:14px; color:#4b5563" id="dateLine">Awarded on <span id="date">—</span></div>
+      </div>
+
+      <div class="seal" aria-hidden="true"></div>
+
+      <div class="footer">
+        <div class="sigbox">
+          <div class="signame" id="sig1">Registrar Name</div>
+          <div class="sigtitle">Registrar</div>
+        </div>
+        <div class="sigbox">
+          <div class="signame" id="sig2">Vice Chancellor Name</div>
+          <div class="sigtitle">Vice Chancellor</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Apply inputs to the certificate
+    function applyFields(){
+      const name = document.getElementById('inp-name').value.trim();
+      const award = document.getElementById('inp-award').value.trim();
+      const prog = document.getElementById('inp-program').value.trim();
+      const dateVal = document.getElementById('inp-date').value;
+      const s1 = document.getElementById('inp-sig1').value.trim();
+      const s2 = document.getElementById('inp-sig2').value.trim();
+
+      if(name) document.getElementById('student').textContent = name;
+      if(award) document.getElementById('award').textContent = award;
+      if(prog) document.getElementById('program').textContent = prog;
+
+      const dateEl = document.getElementById('date');
+      if(dateVal){
+        const dt = new Date(dateVal);
+        const opts = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateEl.textContent = dt.toLocaleDateString(undefined, opts);
+      } else {
+        const today = new Date();
+        const opts = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateEl.textContent = today.toLocaleDateString(undefined, opts);
+      }
+
+      if(s1) document.getElementById('sig1').textContent = s1;
+      if(s2) document.getElementById('sig2').textContent = s2;
+    }
+
+    // Prefill today on load
+    window.addEventListener('DOMContentLoaded', () => applyFields());
+  </script>
+</body>
+</html>

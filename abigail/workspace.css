@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*styling for body*/
+body {
+  margin: 0;
+  overflow-x: hidden
+
+}
+
+/*styling for logo*/
+.logo {
+  width: 5px;
+  height: 70px;
+  display: flex;
+  justify-content: left;
+  border-radius: 3px;
+  margin: 20px;
+
+
+
+}
+
+
+
+img {
+  width: 10%;
+
+
+}
+
+/*styling for header*/
+header {
+  
+background-color: #D4AF37;
+  /* margin-left: 0%;
+    margin-right: 0%;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
+
+
+@media screen {.header{
+  max-width: 800px;
+  min-width: 300px;
+}
+  
+}
+
+/*styling for navlink*/
+.navlink {
+  /* color: white; */
+  display: flex;
+  gap: 30px;
+
+
+}
+
+.navlink li {
+  list-style: none;
+  color: #FFFFFF;
+
+
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* list-style-type: none; */
+  font-size: large;
+
+  padding: 10px;
+  align-items: center;
+
+
+
+}
+
+a {
+  color: #ddd;
+  text-decoration: none;
+
+}
+
+
+
+
+
+
+/*styling for my apply now*/
+
+
+.bg {
+  width: 50%;
+  margin-top: 1%;
+  margin-top: 1000px;
+
+}
+
+.boo {
+  background-color: bisque;
+  text-align: center;
+  color: black;
+}
+
+
+
+.Apply {
+  
+}
+
+
+
+
+
+
+.your {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+/* Section background */
+.apply-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main container */
+.apply-card {
+  display: flex;
+  width: 100%;           /* Fill laptop width */
+  height: 100vh;         /* Fill screen height */
+  overflow: hidden;
+}
+
+/* Text side */
+.apply-text {
+  flex: 1;               /* Equal width with image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Title */
+.hh {
+  color: rgb(143, 104, 5);
+  font-family: monospace;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  
+}
+
+/* Main heading */
+.h {
+  color: white;
+  font-size: 2.5rem;
+  font-family: monospace;
+  margin-bottom: 1.5rem;
+}
+
+/* Subheading */
+.sec {
+  color: antiquewhite;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.apply-btn {
+  display: inline-block;
+  background-color: red;
+  color: black;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: red;
+}
+
+/* Note text */
+.no {
+  color: #ddd;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Image side */
+.apply-image {
+  flex: 1;               /* Equal width with text */
+}
+
+.apply-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Fill space without distortion */
+}
+
+
+html{
+  max-width: 100%;
+  font-size: 100%;
+  
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  header
+  {
+    font-size: 30px;
+    color: green;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  .apply-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .apply-image {
+    height: 250px;
+  }
+}
+
+
+
+@media (max-width: 500px) {
+
+
+
+  html {
+    max-width: 100%;
+  }
+  header
+  {
+    font-size: 20px;
+    color: green;
+  }
+
+  h1{
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 2
+    0px;
+  }
+  .apply-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .apply-image {
+    height: 250px;
+  }
+}
+
+
+
+@media (max-width: 400px) {
+
+
+
+  html {
+    max-width: 100%;
+  }
+  header
+  {
+    font-size: 20px;
+    color: green;
+  }
+
+  h1{
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+  .apply-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .apply-image {
+    height: 250px;
+  }
+}
+
+
+

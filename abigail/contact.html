@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Abigford University</title>
+  <link rel="stylesheet" href="workspace.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+    }
+    
+    #contact {
+      padding: 30px;
+      text-align: center;
+      margin-top: 200px;
+    }
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    #map {
+      height: 400px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea, form button {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    form button {
+      background: #09203f;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #0f3460;
+    }
+  </style>
+    <link rel="stylesheet" href="workspace.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <img src="./images/Abiglogo.png" alt="logo" class="img">
+    <ul class="navlink">
+      <li><a href="workspace.html">Home</a></li>
+      
+      <li><a href="Admissions.html">Admissions</a></li>
+      
+      
+      <li><a href="contact.html">Contact us</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2 class="us">Contact Us</h2>
+  <div class="contact-container">
+    
+    <!-- Office Hours -->
+    <div class="card">
+      <h3>Office Hours</h3>
+      <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+      <p>Saturday: 9:00 AM - 1:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+    
+    <!-- Faculties -->
+    <div class="card">
+      <h3>Faculties</h3>
+      <ul>
+        <li>Faculty of Science</li>
+        <li>Faculty of Arts</li>
+        <li>Faculty of Engineering</li>
+        <li>Faculty of Business</li>
+        <li>Faculty of Education</li>
+        
+      </ul>
+    </div>
+    
+    <!-- Contact Info -->
+    <div class="card">
+      <h3>Get in Touch</h3>
+      <p>Email: info@abigforduniversity.edu</p>
+      <p>Phone: +234 800 000 0000</p>
+      <p>Location: Calabar, Cross River State</p>
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<div id="map"></div>
+
+<!-- Contact Form -->
+<section id="form" class="contact-container">
+  <div class="card">
+    <h3>Send Us a Message</h3>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  // Initialize map centered on Calabar
+  var map = L.map('map').setView([4.95893, 8.32695], 13);
+
+  // Load OSM tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Marker for Abigford University
+  L.marker([4.95893, 8.32695]).addTo(map)
+    .bindPopup("<b>Abigford University</b><br>Calabar, Cross River State")
+    .openPopup();
+</script>
+ <footer style="background:rgb(12, 46, 71);color:white; padding:3rem 5%; font-family:Arial, sans-serif;">
+      <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem;">
+
+        <!-- About -->
+        <div>
+          <h3 style="font-size:1.2rem; margin-bottom:1rem;">Abigford Open University</h3>
+          <p style="line-height:1.6; font-size:0.95rem;">
+             Abigford Open University is dedicated to removing the barriers that restrict access.
+  </p>
+          </p>
+          <p style="margin-top:1rem; font-size:0.9rem;">📞 +234 804 000 9003</p>
+          <p style="font-size:0.9rem;">📞+234 800 000 0000</p>
+          <p style="font-size:0.9rem;">✉️info@abigforduniversity.edu</p>
+          </p>
+        </div>
+
+        <!-- The University -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">The University</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">About Us</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Admissions</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Faculties</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Contact Us</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Gallery</p>
+          <p style="line-height:1.8; font-size:0.9rem;">FAQ</p>
+        </div>
+
+        <!-- Studying -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">Studying</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">Admission Requirements</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Direct Entry Requirements</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Inter-University Transfer</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Scholarship</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Donate</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Apply</p>
+        </div>
+
+        <!-- Digital Learning Tools -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">Digital Learning Tools</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">E-Library</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Learning Management System (LMS)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Business Administration (MBA)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Public Administration (MPA)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Information Technology (MIT)</p>
+          <p style="line-height:1.8; font-size:0.9rem;">Master of Public Health (MPH)</p>
+        </div>
+
+        <!-- Faculties -->
+        <div>
+          <h4 style="margin-bottom:1rem; font-size:1rem;">Faculties</h4>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Computing</p>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Management and Social Sciences</p>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Communication and Media Studies</p>
+          <p style="line-height:1.8; font-size:0.9rem;">School of Allied Health Sciences</p>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div
+        style="text-align:center; margin-top:2rem; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.2); padding-top:1rem;">
+        
+        <p>© 2025. Abiford Education Services Limited. All rights reserved.</p>
+        <p>Terms & Conditions | Privacy Policy</p>
+      </div>
+    </footer>
+
+</body>
+</html>
