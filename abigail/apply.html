@@ -94,29 +94,50 @@ header{
   </style>
 </head>
 <body class="body">
-  <header
-   <nav class="navbar">
-      <img src="./images/Abiglogo.png" alt="logo" class="img">
-      <ul class="navlink ">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#About us.html">About us</a></li>
-        <li><a href="Admissions.html">Admissions</a></li>
-        <li><a href="#Faculties.html">Faculties</a></li>
-        <li><a href="#Tuition.html">Tuition</a></li>
-        <li><a href="Contact.html">Contact us</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+  <header>
+  <nav class="navbar">
+    <img src="./images/Abiglogo.png" alt="logo" class="img">
 
-        <li><a href="#faq">faq</a></li>
-      </ul>
-    </nav>
-    <script>
-  window.addEventListener("load", function() {
-    const header = document.querySelector("header");
-    document.body.style.paddingTop = header.offsetHeight + "px";
-  });
-</script>
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-  </header>
+    <ul class="navlink" id="navlink">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#About us.html">About us</a></li>
+      <li><a href="Admissions.html">Admissions</a></li>
+      <li><a href="#Faculties.html">Faculties</a></li>
+      <li><a href="#Tuition.html">Tuition</a></li>
+      <li><a href="Contact.html">Contact us</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="#faq">faq</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Adjust padding so content not hidden by fixed header
+    window.addEventListener("load", function () {
+      const header = document.querySelector("header");
+      document.body.style.paddingTop = header.offsetHeight + "px";
+    });
+
+    // Toggle nav + animate hamburger
+    const hamburger = document.getElementById("hamburger");
+    const navlink = document.getElementById("navlink");
+
+    hamburger.addEventListener("click", () => {
+      navlink.classList.toggle("show");
+      hamburger.classList.toggle("active");
+    });
+  </script>
+</header>
+
+
+
 
 
     
