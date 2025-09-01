@@ -59,13 +59,13 @@ background-color: #D4AF37;
   /* color: white; */
   display: flex;
   gap: 30px;
-
+color: #0A2E5C;
 
 }
 
 .navlink li {
   list-style: none;
-  color: #FFFFFF;
+  
 
 
 }
@@ -183,7 +183,7 @@ a {
 /* Button */
 .apply-btn {
   display: inline-block;
-  background-color: red;
+  background-color:#D4AF37;
   color: black;
   padding: 0.8rem 1.8rem;
   border-radius: 8px;
@@ -220,7 +220,12 @@ html{
   font-size: 100%;
   
 }
-
+@media (max-width: 768px) {
+  .html{
+    flex-direction: column;
+    padding: 10px;
+  }
+}
 /* Responsive for mobile */
 @media (max-width: 768px) {
   header
