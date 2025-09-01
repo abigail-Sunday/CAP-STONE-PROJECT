@@ -1,102 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <link rel="stylesheet" href="index.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abiford University – Admission</title>
+  <title>Contact Us - Abigford University</title>
+  <link rel="stylesheet" href="workspace.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <style>
-    .welcome {
-      margin-top: 200px;
-    }
-
-    .decision {
+    body {
       font-family: Arial, sans-serif;
-      background: #f9f9fc;
       margin: 0;
-      padding: 0;
-      margin-top: 100px;
+      background: #f4f4f9;
     }
-
-    main {
-      max-width: 900px;
-      margin: 30px auto;
+    
+    #contact {
+      padding: 30px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
       padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
       background: white;
+      padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
     }
-
-    section {
-      margin-bottom: 40px;
+    #map {
+      height: 400px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-
-    section h2 {
-      color: #0c2e47;
-      margin-bottom: 12px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 6px;
-    }
-
-    ul {
-      line-height: 1.6;
-    }
-
     form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
     }
-
-    label {
-      font-weight: bold;
-    }
-
-    input,
-    select,
-    textarea {
+    form input, form textarea, form button {
+      margin: 10px 0;
       padding: 10px;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      width: 100%;
+      font-size: 14px;
     }
-
-    button {
-      background: #0A2E5C;
-
+    form button {
+      background: #09203f;
       color: white;
-      padding: 12px;
       border: none;
-      border-radius: 6px;
-      font-size: 1rem;
       cursor: pointer;
       transition: background 0.3s;
     }
-
-    button:hover {
-      background: #1d285e;
-    }
-
-    .message {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #0A2E5C;
-
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
+    form button:hover {
+      background: #0f3460;
     }
   </style>
+    <link rel="stylesheet" href="index.css">
 </head>
+<body>
 
-<body class="decision">
-  <header>
+    <header>
   <nav class="navbar">
     <img src="./images/Abiglogo.png" alt="logo" class="img">
 
@@ -109,14 +79,11 @@
 
     <ul class="navlink" id="navlink">
       <li><a href="index.html">Home</a></li>
-      <li><a href="#About us.html">About us</a></li>
-      <li><a href="Admissions.html">Admissions</a></li>
-      <li><a href="#Faculties.html">Faculties</a></li>
-      <li><a href="#Tuition.html">Tuition</a></li>
+      
       <li><a href="Contact.html">Contact us</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="people.html">People</a></li>
-      <li><a href="#faq">faq</a></li>
+      
     </ul>
   </nav>
 
@@ -139,91 +106,73 @@
 </header>
 
 
-  <main class="welcome">
-    <!-- Intro -->
-    <section>
-      <h2>Admission<a style="margin-right: 1rem;"></a>Admission<a style="margin-right: 1rem;"></a> Admission<a
-          style="margin-right: 1rem;"></a> Admission</h2>
-      <p>
-        At Abiford University, we welcome students who are passionate about learning, growth,
-        and contributing positively to society. Our admissions process is simple, transparent,
-        and student-focused.
-      </p>
-    </section>
-
-    <!-- Requirements -->
-    <section>
-      <h2>Admission Requirements</h2>
+    
+<!-- Contact Section -->
+<section id="contact">
+  <h2 class="us">Contact Us</h2>
+  <div class="contact-container">
+    
+    <!-- Office Hours -->
+    <div class="card">
+      <h3>Office Hours</h3>
+      <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+      <p>Saturday: 9:00 AM - 1:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+    
+    <!-- Faculties -->
+    <div class="card">
+      <h3>Faculties</h3>
       <ul>
-        <li>Completed application form</li>
-        <li>Academic transcripts and certificates</li>
-        <li>Proof of English proficiency (for international applicants)</li>
-        <li>Two passport-sized photographs</li>
-        <li>Valid identification (National ID or Passport)</li>
+        <li>Faculty of Science</li>
+        <li>Faculty of Arts</li>
+        <li>Faculty of Engineering</li>
+        <li>Faculty of Business</li>
+        <li>Faculty of Education</li>
+        
       </ul>
-    </section>
+    </div>
+    
+    <!-- Contact Info -->
+    <div class="card">
+      <h3>Get in Touch</h3>
+      <p>Email: info@abigforduniversity.edu</p>
+      <p>Phone: +234 800 000 0000</p>
+      <p>Location: Calabar, Cross River State</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Steps -->
-    <section>
-      <h2>Application Steps</h2>
-      <ol>
-        <li>Fill out the admission form online.</li>
-        <li>Upload all required documents.</li>
-        <li>Pay the non-refundable application fee.</li>
-        <li>Wait for confirmation and further instructions via email.</li>
-      </ol>
-    </section>
+<!-- Map -->
+<div id="map"></div>
 
-    <!-- Form -->
-    <section>
-      <h2>Apply Now</h2>
-      <form id="admissionForm">
-        <div>
-          <label for="fullname">Full Name:</label>
-          <input type="text" id="fullname" required>
-        </div>
-        <div>
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" required>
-        </div>
-        <div>
-          <label for="program">Program of Interest:</label>
-          <select id="program" required>
-            <option value="">-- Select Program --</option>
-            <option>Science</option>
-            <option>Engineering</option>
-            <option>Law</option>
-            <option>Arts</option>
-            <option>Management & Social Sciences</option>
-            <option>Education</option>
-          </select>
-        </div>
-        <div>
-          <label for="statement">Personal Statement:</label>
-          <textarea id="statement" rows="4" required></textarea>
-        </div>
-        <button type="submit">Submit Application</button>
-        <div class="message" id="formMessage"></div>
-      </form>
-    </section>
-  </main>
+<!-- Contact Form -->
+<section id="form" class="contact-container">
+  <div class="card">
+    <h3>Send Us a Message</h3>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
 
-  
+<script>
+  // Initialize map centered on Calabar
+  var map = L.map('map').setView([4.95893, 8.32695], 13);
 
-  <script>
-    const form = document.getElementById('admissionForm');
-    const message = document.getElementById('formMessage');
+  // Load OSM tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      // Simulate submission
-      setTimeout(() => {
-        message.textContent = "✅ Your application was successfully submitted! Please check your email in 24 hours for updates.";
-        message.style.color = "green";
-        form.reset();
-      }, 1000);
-    });
-  </script>
+  // Marker for Abigford University
+  L.marker([4.95893, 8.32695]).addTo(map)
+    .bindPopup("<b>Abigford University</b><br>Calabar, Cross River State")
+    .openPopup();
+</script>
  <footer style="background:rgb(12, 46, 71);color:white; padding:3rem 5%; font-family:Arial, sans-serif;">
       <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem;">
 
@@ -295,5 +244,4 @@
     </footer>
 
 </body>
-
 </html>
