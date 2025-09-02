@@ -3,80 +3,94 @@
 
 <head>
   <style>
-   
+    /* Background slideshow */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      animation: slideShow 18s infinite;
+    }
 
+    /* Dark overlay for text readability */
+    .hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(9, 32, 63, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
 
-/* Background slideshow */
-.hero {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  animation: slideShow 18s infinite;
-}
+    .apply-text {
+      color: white;
+      max-width: 600px;
+    }
 
-/* Dark overlay for text readability */
-.hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(9, 32, 63, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
+    .apply-text h5 {
+      font-size: 22px;
+      color: #f7c04a;
+    }
 
-.apply-text {
-  color: white;
-  max-width: 600px;
-}
+    .apply-text strong {
+      font-size: 36px;
+      color: #ffffff;
+    }
 
-.apply-text h5 {
-  font-size: 22px;
-  color: #f7c04a;
-}
+    .apply-text h6 {
+      font-size: 18px;
+      margin: 20px 0;
+      color: #dbeafe;
+    }
 
-.apply-text strong {
-  font-size: 36px;
-  color: #ffffff;
-}
+    .apply-btn {
+      background: #f7c04a;
+      color: #09203f;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
 
-.apply-text h6 {
-  font-size: 18px;
-  margin: 20px 0;
-  color: #dbeafe;
-}
+    .apply-text .no {
+      margin-top: 15px;
+      font-style: italic;
+      color: #e0e0e0;
+    }
 
-.apply-btn {
-  background: #f7c04a;
-  color: #09203f;
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
-}
+    /* Slideshow animation */
+    @keyframes slideShow {
+      0% {
+        background-image: url("images/gettyimages-1339470692-640x640.avif");
+      }
 
-.apply-text .no {
-  margin-top: 15px;
-  font-style: italic;
-  color: #e0e0e0;
-}
+      33% {
+        background-image: url("images/gettyimages-1426127150-640x640.avif");
+      }
 
-/* Slideshow animation */
-@keyframes slideShow {
-  0%   { background-image: url("images/gettyimages-1339470692-640x640.avif"); }
-  33%  { background-image: url("images/gettyimages-1426127150-640x640.avif"); }
-  66%  { background-image: url("images/gettyimages-1534634994-640x640.avif"); }
-  100% { background-image: url("images/gettyimages-1025036346-640x640.avif"); }
-  100%{background-image: url("images/gettyimages-512746852-612x612.jpg");}
-  100%{ background-image: url("images/efb0e64f-1cdb-420e-a9d2-d6010e35f44e.png");}
-}
+      66% {
+        background-image: url("images/gettyimages-1534634994-640x640.avif");
+      }
+
+      100% {
+        background-image: url("images/gettyimages-1025036346-640x640.avif");
+      }
+
+      100% {
+        background-image: url("images/gettyimages-512746852-612x612.jpg");
+      }
+
+      100% {
+        background-image: url("images/efb0e64f-1cdb-420e-a9d2-d6010e35f44e.png");
+      }
+    }
 
     .learn-box h3 {
       margin-bottom: 10px;
@@ -109,19 +123,63 @@
       background: #f5f5f5;
       padding: 30px;
     }
-    #faq { max-width:980px; margin:0 auto; padding:18px; font-family:Arial, sans-serif; }
-  #faq h1 { text-align:center; margin-bottom:18px; }
-  .faq-container { background:#fff; border-radius:8px; box-shadow:0 6px 22px rgba(0,0,0,0.06); }
-  .faq-item { border-bottom:1px solid #ececec; padding:14px 8px; }
-  .faq-item:last-child { border-bottom:none; }
-  .faq-question { display:flex; justify-content:space-between; cursor:pointer; font-weight:700; }
-  .faq-answer { overflow:hidden; max-height:0; transition:max-height 0.32s ease, padding 0.32s ease; }
-  .faq-answer p { margin:10px 0 0 0; }
-  .icon { font-size:20px; width:28px; text-align:center; }
-  .faq-item.active .icon { color:#b71c1c; }
+
+    #faq {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    #faq h1 {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .faq-container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ececec;
+      padding: 14px 8px;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.32s ease, padding 0.32s ease;
+    }
+
+    .faq-answer p {
+      margin: 10px 0 0 0;
+    }
+
+    .icon {
+      font-size: 20px;
+      width: 28px;
+      text-align: center;
+    }
+
+    .faq-item.active .icon {
+      color: #b71c1c;
+    }
 
 
-    .apply-section{
+    .apply-section {
       background-color: #0A2E5C;
     }
   </style>
@@ -132,77 +190,78 @@
 
 <body class="Public">
   <header>
-  <nav class="navbar">
-    <img src="./images/Abiglogo.png" alt="logo" class="img">
+    <nav class="navbar">
+      <img src="./images/Abiglogo.png" alt="logo" class="img">
 
-    <!-- Hamburger Button -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <!-- Hamburger Button -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="navlink" id="navlink">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#About us.html">About us</a></li>
+        <li><a href="Admissions.html">Admissions</a></li>
+        <li><a href="Faculties.html">Faculties</a></li>
+        <li><a href="#Tuition.html">Tuition</a></li>
+        <li><a href="Contact us.html">Contact us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="#faq">faq</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      // Adjust padding so content not hidden by fixed header
+      window.addEventListener("load", function () {
+        const header = document.querySelector("header");
+        document.body.style.paddingTop = header.offsetHeight + "px";
+      });
+
+      // Toggle nav + animate hamburger
+      const hamburger = document.getElementById("hamburger");
+      const navlink = document.getElementById("navlink");
+
+      hamburger.addEventListener("click", () => {
+        navlink.classList.toggle("show");
+        hamburger.classList.toggle("active");
+      });
+    </script>
+  </header>
+
+  <section class="nonprofit">
+    <div class="admsnX">
+      <h2 class="admsnTextX">
+        Admission for the September 2025 academic session is ongoing.
+        <a href="apply.html" class="btnX">Apply Now</a>
+      </h2>
     </div>
-
-    <ul class="navlink" id="navlink">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#About us.html">About us</a></li>
-      <li><a href="Admissions.html">Admissions</a></li>
-      <li><a href="Faculties.html">Faculties</a></li>
-      <li><a href="#Tuition.html">Tuition</a></li>
-      <li><a href="Contact us.html">Contact us</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="people.html">People</a></li>
-      <li><a href="#faq">faq</a></li>
-    </ul>
-  </nav>
-
-  <script>
-    // Adjust padding so content not hidden by fixed header
-    window.addEventListener("load", function () {
-      const header = document.querySelector("header");
-      document.body.style.paddingTop = header.offsetHeight + "px";
-    });
-
-    // Toggle nav + animate hamburger
-    const hamburger = document.getElementById("hamburger");
-    const navlink = document.getElementById("navlink");
-
-    hamburger.addEventListener("click", () => {
-      navlink.classList.toggle("show");
-      hamburger.classList.toggle("active");
-    });
-  </script>
-</header>
-
-<section>
-  <div class="boo">
-    <h2 class="name">
-      Admission for the September 2025 academic session is ongoing.
-      <a href="apply.html" style="color: rgb(196, 125, 125); margin-left:1rem;">Apply Now!</a>
-    </h2>
-  </div>
-</section>
+  </section>
 
 
-  
-   <section class="hero">
-  <div class="overlay">
-    <div class="apply-text">
-      <h5 class="hh">Abigford  Open University</h5>
 
-      <p>
-        <strong class="h">Join Thousands<br>of Abigford Students</strong>
-      </p>
 
-      <h6 class="sec">
-        Gain admission now, Start Classes in September 2025.
-      </h6>
+  <section class="hero">
+    <div class="overlay">
+      <div class="apply-text">
+        <h5 class="hh">Abigford Open University</h5>
 
-      <a href="view.html" class="apply-btn">View Program</a>
+        <p>
+          <strong class="h">Join Thousands<br>of Abigford Students</strong>
+        </p>
 
-      <p class="no">*No application fee</p>
+        <h6 class="sec">
+          Gain admission now, Start Classes in September 2025.
+        </h6>
+
+        <a href="view.html" class="apply-btn">View Program</a>
+
+        <p class="no">*No application fee</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="space">
     <!-- Matriculation Section -->
@@ -210,110 +269,127 @@
       <h2 style="color:rgb(12, 46, 71); font-size:1.8rem; margin-bottom:0.5rem;"> Abigford MATRICULATION</h2>
       <p style="font-weight:bold; margin-bottom:1rem;">Abiford University Matriculation</p>
       <p>
-       
 
-The matriculation ceremony of Abiford University marks the official welcome of new students into the academic community. This important event is not only a tradition but also a symbol of commitment, as students take their matriculation oath and pledge to uphold the values and standards of the institution.
 
-During the ceremony, the Vice Chancellor, academic staff, and distinguished guests address the students, encouraging them to embrace discipline, excellence, and hard work as they begin their academic journey.
+        The matriculation ceremony of Abiford University marks the official welcome of new students into the academic
+        community. This important event is not only a tradition but also a symbol of commitment, as students take their
+        matriculation oath and pledge to uphold the values and standards of the institution.
 
-Matriculation also serves as a celebration of new beginnings, filled with excitement, joy, and hope for the future. Families, friends, and well-wishers gather to share in the success of the fresh students as they officially become members of the Abiford University family.
+        During the ceremony, the Vice Chancellor, academic staff, and distinguished guests address the students,
+        encouraging them to embrace discipline, excellence, and hard work as they begin their academic journey.
 
-At Abiford University, matriculation is more than a formality — it is the beginning of a transformative educational experience.
+        Matriculation also serves as a celebration of new beginnings, filled with excitement, joy, and hope for the
+        future. Families, friends, and well-wishers gather to share in the success of the fresh students as they
+        officially become members of the Abiford University family.
+
+        At Abiford University, matriculation is more than a formality — it is the beginning of a transformative
+        educational experience.
       </p>
     </section>
     <section style="padding: 2rem 5%; background-color:#f9f9f9; border-bottom:2px solid #ddd;">
-  <h2 style="color:rgb(12, 46, 71); font-size:1.8rem; margin-bottom:0.5rem;">About Us</h2>
-  <p style="font-weight:bold; margin-bottom:1rem;">
-    Abigford Open University is dedicated to removing the barriers that restrict access.
-  </p>
+      <h2 style="color:rgb(12, 46, 71); font-size:1.8rem; margin-bottom:0.5rem;">About Us</h2>
+      <p style="font-weight:bold; margin-bottom:1rem;">
+        Abigford Open University is dedicated to removing the barriers that restrict access.
+      </p>
 
-  <!-- Short preview -->
-  <p id="About us.html">
-    Welcome to Abigford University, a place where dreams are nurtured, leaders are shaped, and the future is written...
-  </p>
+      <!-- Short preview -->
+      <p id="About us.html">
+        Welcome to Abigford University, a place where dreams are nurtured, leaders are shaped, and the future is
+        written...
+      </p>
 
-  <!-- Full text (hidden by default) -->
-  <div id="about-full" style="display:none; line-height:1.6;">
-    <p>
-      Welcome to Abigford University, a place where dreams are nurtured, leaders are shaped, and the future is written. At Abigford, we believe education is not only about gaining knowledge, but also about transforming lives, strengthening character, and empowering communities.
-    </p>
+      <!-- Full text (hidden by default) -->
+      <div id="about-full" style="display:none; line-height:1.6;">
+        <p>
+          Welcome to Abigford University, a place where dreams are nurtured, leaders are shaped, and the future is
+          written. At Abigford, we believe education is not only about gaining knowledge, but also about transforming
+          lives, strengthening character, and empowering communities.
+        </p>
 
-    <p>
-      Founded with the vision of bridging excellence, integrity, and innovation, Abigford University stands as a beacon of hope and opportunity in the ever-changing world of education. Our institution exists to serve students who aspire to achieve greatness—not just for themselves, but for the world around them.
-    </p>
+        <p>
+          Founded with the vision of bridging excellence, integrity, and innovation, Abigford University stands as a
+          beacon of hope and opportunity in the ever-changing world of education. Our institution exists to serve
+          students who aspire to achieve greatness—not just for themselves, but for the world around them.
+        </p>
 
-    <p>
-      We are proud to be a student-centered university. Every decision, every innovation, and every program is built around the success of our learners. We don’t just teach students to pass exams; we prepare them to face real-world challenges with creativity, confidence, and competence.
-    </p>
+        <p>
+          We are proud to be a student-centered university. Every decision, every innovation, and every program is built
+          around the success of our learners. We don’t just teach students to pass exams; we prepare them to face
+          real-world challenges with creativity, confidence, and competence.
+        </p>
 
-    <p>
-      At Abigford University, education is not confined to the four walls of a classroom. Instead, it is a lifelong journey that connects the classroom to the community, research to society, and innovation to opportunity.
-    </p>
+        <p>
+          At Abigford University, education is not confined to the four walls of a classroom. Instead, it is a lifelong
+          journey that connects the classroom to the community, research to society, and innovation to opportunity.
+        </p>
 
-    <h3>Our History</h3>
-    <p>
-      The idea for Abigford University was born out of a simple yet powerful belief: every individual deserves access to quality education, regardless of their background...
-    </p>
+        <h3>Our History</h3>
+        <p>
+          The idea for Abigford University was born out of a simple yet powerful belief: every individual deserves
+          access to quality education, regardless of their background...
+        </p>
 
-    <h3>Our Mission</h3>
-    <p>
-      “To deliver accessible, innovative, and globally relevant education that empowers individuals to create positive change in their communities and the world.”
-    </p>
-    <ul>
-      <li><b>Excellence in Teaching:</b> Providing high-quality programs that are practical and research-driven.</li>
-      <li><b>Integrity in Practice:</b> Upholding honesty, fairness, and transparency in all we do.</li>
-      <li><b>Innovation in Learning:</b> Using modern technologies to make learning engaging.</li>
-      <li><b>Accessibility for All:</b> Ensuring education is available to everyone, regardless of barriers.</li>
-    </ul>
+        <h3>Our Mission</h3>
+        <p>
+          “To deliver accessible, innovative, and globally relevant education that empowers individuals to create
+          positive change in their communities and the world.”
+        </p>
+        <ul>
+          <li><b>Excellence in Teaching:</b> Providing high-quality programs that are practical and research-driven.
+          </li>
+          <li><b>Integrity in Practice:</b> Upholding honesty, fairness, and transparency in all we do.</li>
+          <li><b>Innovation in Learning:</b> Using modern technologies to make learning engaging.</li>
+          <li><b>Accessibility for All:</b> Ensuring education is available to everyone, regardless of barriers.</li>
+        </ul>
 
-    <h3>Our Vision</h3>
-    <p>
-      “To be a global leader in education, recognized for innovation, integrity, and impact.”
-    </p>
+        <h3>Our Vision</h3>
+        <p>
+          “To be a global leader in education, recognized for innovation, integrity, and impact.”
+        </p>
 
-    <h3>Our Core Values</h3>
-    <ul>
-      <li>Excellence</li>
-      <li>Integrity</li>
-      <li>Innovation</li>
-      <li>Diversity</li>
-      <li>Service</li>
-      <li>Leadership</li>
-      <li>Lifelong Learning</li>
-    </ul>
+        <h3>Our Core Values</h3>
+        <ul>
+          <li>Excellence</li>
+          <li>Integrity</li>
+          <li>Innovation</li>
+          <li>Diversity</li>
+          <li>Service</li>
+          <li>Leadership</li>
+          <li>Lifelong Learning</li>
+        </ul>
 
-    <h3>Why Abigford University Is Unique</h3>
-    <ul>
-      <li><b>A Fresh Vision:</b> Built for the future, not bound by old traditions.</li>
-      <li><b>Global Outlook:</b> Programs designed for success anywhere in the world.</li>
-      <li><b>Student-Centered Learning:</b> Students are not numbers, they are individuals.</li>
-    </ul>
-  </div>
+        <h3>Why Abigford University Is Unique</h3>
+        <ul>
+          <li><b>A Fresh Vision:</b> Built for the future, not bound by old traditions.</li>
+          <li><b>Global Outlook:</b> Programs designed for success anywhere in the world.</li>
+          <li><b>Student-Centered Learning:</b> Students are not numbers, they are individuals.</li>
+        </ul>
+      </div>
 
-  <!-- Toggle button -->
-  <button id="toggleBtn"
-    style="margin-top:10px; padding:8px 15px; border:none; background:#0c2e47; color:white; border-radius:5px; cursor:pointer;">
-    Learn more
-  </button>
-</section>
+      <!-- Toggle button -->
+      <button id="toggleBtn"
+        style="margin-top:10px; padding:8px 15px; border:none; background:#0c2e47; color:white; border-radius:5px; cursor:pointer;">
+        Learn more
+      </button>
+    </section>
 
-<script>
-  const toggleBtn = document.getElementById("toggleBtn");
-  const preview = document.getElementById("about-preview");
-  const fullText = document.getElementById("about-full");
+    <script>
+      const toggleBtn = document.getElementById("toggleBtn");
+      const preview = document.getElementById("about-preview");
+      const fullText = document.getElementById("about-full");
 
-  toggleBtn.addEventListener("click", () => {
-    if (fullText.style.display === "none") {
-      fullText.style.display = "block";
-      preview.style.display = "none";
-      toggleBtn.textContent = "Learn less";
-    } else {
-      fullText.style.display = "none";
-      preview.style.display = "block";
-      toggleBtn.textContent = "Learn more";
-    }
-  });
-</script>
+      toggleBtn.addEventListener("click", () => {
+        if (fullText.style.display === "none") {
+          fullText.style.display = "block";
+          preview.style.display = "none";
+          toggleBtn.textContent = "Learn less";
+        } else {
+          fullText.style.display = "none";
+          preview.style.display = "block";
+          toggleBtn.textContent = "Learn more";
+        }
+      });
+    </script>
 
 
     <!-- Testimonials -->
@@ -331,23 +407,23 @@ At Abiford University, matriculation is more than a formality — it is the begi
           Elizabeth Brown<br><span style="font-size:0.9rem; color:bisque;">MPA</span>
         </div>
         <div style="background-color:rgb(12, 46, 71); color:white; padding:1rem; border-radius:8px; text-align:center;">
-        Naomi Wilson<br><span style="font-size:0.9rem; color:bisque;">BSc. Economics</span>
+          Naomi Wilson<br><span style="font-size:0.9rem; color:bisque;">BSc. Economics</span>
         </div>
         <div style="background-color:rgb(12, 46, 71); color:white; padding:1rem; border-radius:8px; text-align:center;">
-         Mary Okonkwo<br><span style="font-size:0.9rem; color:bisque;">BSc. Computer Science</span>
+          Mary Okonkwo<br><span style="font-size:0.9rem; color:bisque;">BSc. Computer Science</span>
         </div>
         <div style="background-color:rgb(12, 46, 71); color:white; padding:1rem; border-radius:8px; text-align:center;">
-         Dr. Grace Adams<br><span style="font-size:0.9rem; color:bisque;">BSc. Public Policy and Administration</span>
+          Dr. Grace Adams<br><span style="font-size:0.9rem; color:bisque;">BSc. Public Policy and Administration</span>
         </div>
         <div style="background-color:rgb(12, 46, 71); color:white; padding:1rem; border-radius:8px; text-align:center;">
-         Dr. Peter Okafor<br><span style="font-size:0.9rem; color:bisque;">BSc. Mass Communication and Media
+          Dr. Peter Okafor<br><span style="font-size:0.9rem; color:bisque;">BSc. Mass Communication and Media
             Studies</span>
         </div>
         <div style="background-color:rgb(12, 46, 71); color:white; padding:1rem; border-radius:8px; text-align:center;">
           Dr. Michael Adeyemi<br><span style="font-size:0.9rem; color:bisque;">BSc. Public Health</span>
         </div>
         <div style="background-color:rgb(12, 46, 71); color:white; padding:1rem; border-radius:8px; text-align:center;">
-        Dr. Joseph Carter<br><span style="font-size:0.9rem; color:bisque;">BSc. Cybersecurity</span>
+          Dr. Joseph Carter<br><span style="font-size:0.9rem; color:bisque;">BSc. Cybersecurity</span>
         </div>
       </div>
     </section>
@@ -356,9 +432,12 @@ At Abiford University, matriculation is more than a formality — it is the begi
     <section style="padding: 2rem 5%; background-color:#fdfdfd;">
       <h2 style="color:rgb(12, 46, 71); font-size:1.8rem;">Our Faculty</h2>
       <p style="font-weight:bold; margin-bottom:0.5rem;">Abigford Programs</p>
-      <p>The Faculty of Science at Abiford University is dedicated to excellence in teaching, research, and innovation. Our programs are designed to equip students with strong analytical skills, practical knowledge, and a problem-solving mindset needed to excel in today’s world. With experienced lecturers,
-         modern laboratories, and a student-focused learning environment, the Faculty of Science prepares graduates to become leaders in science, technology, and related fields.
-        </p>
+      <p>The Faculty of Science at Abiford University is dedicated to excellence in teaching, research, and innovation.
+        Our programs are designed to equip students with strong analytical skills, practical knowledge, and a
+        problem-solving mindset needed to excel in today’s world. With experienced lecturers,
+        modern laboratories, and a student-focused learning environment, the Faculty of Science prepares graduates to
+        become leaders in science, technology, and related fields.
+      </p>
 
       <div
         style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; margin-top:1rem;">
@@ -403,260 +482,276 @@ At Abiford University, matriculation is more than a formality — it is the begi
     <!-- MPA Section -->
     <section style="padding: 2rem 5%; background-color:rgb(12, 46, 71); color:white; text-align:center;">
       <h2>The Abigford MPA</h2>
-      <p>The MPA programme at Abiford University is designed to prepare future leaders in government, nonprofit, and public service organisations. It combines policy analysis, public finance, leadership, and ethics to equip students with the knowledge and practical skills needed for effective governance and decision-making. With expert 
+      <p>The MPA programme at Abiford University is designed to prepare future leaders in government, nonprofit, and
+        public service organisations. It combines policy analysis, public finance, leadership, and ethics to equip
+        students with the knowledge and practical skills needed for effective governance and decision-making. With
+        expert
         faculty and real-world projects, the programme develops graduates who
-         can drive positive change in society..</p>
+        can drive positive change in society..</p>
       <p><strong>Academic session starts in September 2025</strong></p>
       <div style="font-size:2rem; margin-top:1rem;"></div>
     </section>
 
 
     <section class="bod">
-     
+
       <section id="faq">
-  <h1>FAQ</h1>
+        <h1>FAQ</h1>
 
-  <div class="faq-container">
+        <div class="faq-container">
 
-    <!-- 1 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        What is Abiford University known for?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Abiford University is known for academic excellence, modern learning facilities, and a strong commitment to student success across diverse fields of study.</p>
-      </div>
-    </div>
+          <!-- 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              What is Abiford University known for?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Abiford University is known for academic excellence, modern learning facilities, and a strong
+                commitment to student success across diverse fields of study.</p>
+            </div>
+          </div>
 
-    <!-- 2 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        Where is the university located?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Abiford University is located in a serene and student-friendly environment, easily accessible for both local and international students.</p>
-      </div>
-    </div>
+          <!-- 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Where is the university located?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Abiford University is located in a serene and student-friendly environment, easily accessible for both
+                local and international students.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 3 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        Does the university accept international students?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, Abiford University welcomes students from around the world and provides support services for international applicants.</p>
-      </div>
-    </div>
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Does the university accept international students?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, Abiford University welcomes students from around the world and provides support services for
+                international applicants.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 4 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        What programmes are offered at Abiford University?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>The university offers undergraduate, postgraduate, and professional programmes across faculties such as Science, Arts, Education, Engineering, Management &amp; Social Sciences, and Law.</p>
-      </div>
-    </div>
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              What programmes are offered at Abiford University?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>The university offers undergraduate, postgraduate, and professional programmes across faculties such as
+                Science, Arts, Education, Engineering, Management &amp; Social Sciences, and Law.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 5 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        How can I apply for admission?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Applications can be completed online through the university’s admission portal. Applicants must fill in their details, upload required documents, and pay the application fee.</p>
-      </div>
-    </div>
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              How can I apply for admission?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Applications can be completed online through the university’s admission portal. Applicants must fill in
+                their details, upload required documents, and pay the application fee.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 6 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        What are the admission requirements?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Requirements vary by programme, but generally include academic transcripts, certificates, and proof of English proficiency for international students.</p>
-      </div>
-    </div>
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              What are the admission requirements?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Requirements vary by programme, but generally include academic transcripts, certificates, and proof of
+                English proficiency for international students.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 7 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        Does the university offer scholarships?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, merit-based and need-based scholarships are available for qualified students.</p>
-      </div>
-    </div>
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Does the university offer scholarships?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, merit-based and need-based scholarships are available for qualified students.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 8 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        What is matriculation at Abiford University?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Matriculation is the official ceremony where new students are formally admitted into the university community.</p>
-      </div>
-    </div>
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              What is matriculation at Abiford University?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Matriculation is the official ceremony where new students are formally admitted into the university
+                community.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 9 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        Is accommodation provided on campus?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, the university provides on-campus hostels as well as assistance in securing off-campus housing.</p>
-      </div>
-    </div>
+          <!-- FAQ 9 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Is accommodation provided on campus?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, the university provides on-campus hostels as well as assistance in securing off-campus housing.
+              </p>
+            </div>
+          </div>
 
-    <!-- FAQ 10 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        What facilities are available for students?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Students have access to libraries, laboratories, ICT centres, sports facilities, and student support services.</p>
-      </div>
-    </div>
+          <!-- FAQ 10 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              What facilities are available for students?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Students have access to libraries, laboratories, ICT centres, sports facilities, and student support
+                services.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 11 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        Does Abiford University run part-time programmes?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, flexible learning options such as part-time and distance-learning programmes are available in selected courses.</p>
-      </div>
-    </div>
+          <!-- FAQ 11 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Does Abiford University run part-time programmes?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, flexible learning options such as part-time and distance-learning programmes are available in
+                selected courses.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 12 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        Are there opportunities for research?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, research and innovation are core to Abiford University, with staff and students encouraged to engage in impactful research projects.</p>
-      </div>
-    </div>
+          <!-- FAQ 12 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Are there opportunities for research?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, research and innovation are core to Abiford University, with staff and students encouraged to
+                engage in impactful research projects.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 13 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        How does the university support student life?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>There are clubs, societies, mentorship programmes, and events that ensure a vibrant campus life.</p>
-      </div>
-    </div>
+          <!-- FAQ 13 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              How does the university support student life?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>There are clubs, societies, mentorship programmes, and events that ensure a vibrant campus life.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 14 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        What career support does the university provide?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>The Career Services Unit assists students with internships, career guidance, and job placement opportunities.</p>
-      </div>
-    </div>
+          <!-- FAQ 14 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              What career support does the university provide?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>The Career Services Unit assists students with internships, career guidance, and job placement
+                opportunities.</p>
+            </div>
+          </div>
 
-    <!-- FAQ 15 -->
-    <div class="faq-item">
-      <div class="faq-question">
-        How can I contact the university for more information?
-        <div class="icon">+</div>
-      </div>
-      <div class="faq-answer">
-        <p>You can contact the Admissions Office via the official university website, email, or phone for further enquiries.</p>
-      </div>
-    </div>
+          <!-- FAQ 15 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              How can I contact the university for more information?
+              <div class="icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <p>You can contact the Admissions Office via the official university website, email, or phone for further
+                enquiries.</p>
+            </div>
+          </div>
 
-  </div>
-  </div>
-</section>
+        </div>
+        </div>
+      </section>
 
-<script>
-  // Keep your class names unchanged: .faq-item .faq-question .faq-answer .icon
-  document.addEventListener('DOMContentLoaded', () => {
-    const faqItems = document.querySelectorAll('.faq-item');
+      <script>
+        // Keep your class names unchanged: .faq-item .faq-question .faq-answer .icon
+        document.addEventListener('DOMContentLoaded', () => {
+          const faqItems = document.querySelectorAll('.faq-item');
 
-    function closeItem(item) {
-      const q = item.querySelector('.faq-question');
-      const a = item.querySelector('.faq-answer');
-      const i = item.querySelector('.icon');
-      if (!a || !q || !i) return;
-      if (a.style.maxHeight === 'none' || a.style.maxHeight === '') {
-        a.style.maxHeight = a.scrollHeight + 'px';
-      }
-      void a.offsetHeight;
-      a.style.maxHeight = '0px';
-      item.classList.remove('active');
-      i.textContent = '+';
-      q.setAttribute('aria-expanded', 'false');
-    }
+          function closeItem(item) {
+            const q = item.querySelector('.faq-question');
+            const a = item.querySelector('.faq-answer');
+            const i = item.querySelector('.icon');
+            if (!a || !q || !i) return;
+            if (a.style.maxHeight === 'none' || a.style.maxHeight === '') {
+              a.style.maxHeight = a.scrollHeight + 'px';
+            }
+            void a.offsetHeight;
+            a.style.maxHeight = '0px';
+            item.classList.remove('active');
+            i.textContent = '+';
+            q.setAttribute('aria-expanded', 'false');
+          }
 
-    function openItem(item) {
-      const q = item.querySelector('.faq-question');
-      const a = item.querySelector('.faq-answer');
-      const i = item.querySelector('.icon');
-      if (!a || !q || !i) return;
-      faqItems.forEach(other => {
-        if (other !== item && other.classList.contains('active')) {
-          closeItem(other);
-        }
-      });
-      item.classList.add('active');
-      i.textContent = '–';
-      q.setAttribute('aria-expanded', 'true');
-      a.style.maxHeight = a.scrollHeight + 'px';
-      const onOpenEnd = (e) => {
-        if (e.propertyName !== 'max-height') return;
-        a.style.maxHeight = 'none';
-        a.removeEventListener('transitionend', onOpenEnd);
-      };
-      a.addEventListener('transitionend', onOpenEnd);
-    }
+          function openItem(item) {
+            const q = item.querySelector('.faq-question');
+            const a = item.querySelector('.faq-answer');
+            const i = item.querySelector('.icon');
+            if (!a || !q || !i) return;
+            faqItems.forEach(other => {
+              if (other !== item && other.classList.contains('active')) {
+                closeItem(other);
+              }
+            });
+            item.classList.add('active');
+            i.textContent = '–';
+            q.setAttribute('aria-expanded', 'true');
+            a.style.maxHeight = a.scrollHeight + 'px';
+            const onOpenEnd = (e) => {
+              if (e.propertyName !== 'max-height') return;
+              a.style.maxHeight = 'none';
+              a.removeEventListener('transitionend', onOpenEnd);
+            };
+            a.addEventListener('transitionend', onOpenEnd);
+          }
 
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-      const answer = item.querySelector('.faq-answer');
-      const icon = item.querySelector('.icon');
-      if (!question || !answer || !icon) return;
-      question.setAttribute('role', 'button');
-      question.setAttribute('tabindex', '0');
-      question.setAttribute('aria-expanded', 'false');
-      answer.style.maxHeight = '0px';
-      icon.textContent = '+';
-      item.classList.remove('active');
-      const toggle = () => {
-        if (item.classList.contains('active')) {
-          closeItem(item);
-        } else {
-          openItem(item);
-        }
-      };
-      question.addEventListener('click', toggle);
-      question.addEventListener('keydown', (ev) => {
-        if (ev.key === 'Enter' || ev.key === ' ') {
-          ev.preventDefault();
-          toggle();
-        }
-      });
-    });
-  });
-</script>
+          faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.icon');
+            if (!question || !answer || !icon) return;
+            question.setAttribute('role', 'button');
+            question.setAttribute('tabindex', '0');
+            question.setAttribute('aria-expanded', 'false');
+            answer.style.maxHeight = '0px';
+            icon.textContent = '+';
+            item.classList.remove('active');
+            const toggle = () => {
+              if (item.classList.contains('active')) {
+                closeItem(item);
+              } else {
+                openItem(item);
+              }
+            };
+            question.addEventListener('click', toggle);
+            question.addEventListener('keydown', (ev) => {
+              if (ev.key === 'Enter' || ev.key === ' ') {
+                ev.preventDefault();
+                toggle();
+              }
+            });
+          });
+        });
+      </script>
 
 
 
@@ -668,8 +763,8 @@ At Abiford University, matriculation is more than a formality — it is the begi
         <div>
           <h3 style="font-size:1.2rem; margin-bottom:1rem;">Abigford Open University</h3>
           <p style="line-height:1.6; font-size:0.95rem;">
-             Abigford Open University is dedicated to removing the barriers that restrict access.
-  </p>
+            Abigford Open University is dedicated to removing the barriers that restrict access.
+          </p>
           </p>
           <p style="margin-top:1rem; font-size:0.9rem;">📞 +234 804 000 9003</p>
           <p style="font-size:0.9rem;">📞+234 800 000 0000</p>
@@ -725,7 +820,7 @@ At Abiford University, matriculation is more than a formality — it is the begi
       <!-- Bottom Footer -->
       <div
         style="text-align:center; margin-top:2rem; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.2); padding-top:1rem;">
-        
+
         <p>© 2025. Abiford Education Services Limited. All rights reserved.</p>
         <p>Terms & Conditions | Privacy Policy</p>
       </div>
