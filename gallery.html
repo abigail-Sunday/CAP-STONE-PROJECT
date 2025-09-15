@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>University Gallery</title>
@@ -35,7 +36,7 @@
       height: 200px;
       object-fit: cover;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
     }
 
@@ -44,47 +45,48 @@
     }
   </style>
 </head>
+
 <body>
-    <header>
-  <nav class="navbar">
-    <img src="./images/Abiglogo.png" alt="logo" class="img">
+  <header>
+    <nav class="navbar">
+      <img src="./images/Abiglogo.png" alt="logo" class="img">
 
-    <!-- Hamburger Button -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <!-- Hamburger Button -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-    <ul class="navlink" id="navlink">
-      <li><a href="index.html">Home</a></li>
-     
-      <li><a href="Admissions.html">Admissions</a></li>
-  
-      <li><a href="Contact us.html">Contact us</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="people.html">People</a></li>
-      
-    </ul>
-  </nav>
+      <ul class="navlink" id="navlink">
+        <li><a href="index.html">Home</a></li>
 
-  <script>
-    // Adjust padding so content not hidden by fixed header
-    window.addEventListener("load", function () {
-      const header = document.querySelector("header");
-      document.body.style.paddingTop = header.offsetHeight + "px";
-    });
+        <li><a href="Admissions.html">Admissions</a></li>
 
-    // Toggle nav + animate hamburger
-    const hamburger = document.getElementById("hamburger");
-    const navlink = document.getElementById("navlink");
+        <li><a href="Contact us.html">Contact us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="people.html">People</a></li>
 
-    hamburger.addEventListener("click", () => {
-      navlink.classList.toggle("show");
-      hamburger.classList.toggle("active");
-    });
-  </script>
-</header>
+      </ul>
+    </nav>
+
+    <script>
+      // Adjust padding so content not hidden by fixed header
+      window.addEventListener("load", function () {
+        const header = document.querySelector("header");
+        document.body.style.paddingTop = header.offsetHeight + "px";
+      });
+
+      // Toggle nav + animate hamburger
+      const hamburger = document.getElementById("hamburger");
+      const navlink = document.getElementById("navlink");
+
+      hamburger.addEventListener("click", () => {
+        navlink.classList.toggle("show");
+        hamburger.classList.toggle("active");
+      });
+    </script>
+  </header>
 
 
 
@@ -125,96 +127,99 @@
     <img src="images/gettyimages-512746852-612x612.jpg" alt="Gallery Image 28">
     <img src="images/Christopher-Everett-swearing-in.jpg" alt="Gallery Image 29">
     <img src="images/e11361bb-e217-49d8-a2b6-d2c5540629cd.png" alt="Gallery Image 30">
-    <img src="images/img31.jpg" alt="Gallery Image 31">
-    <img src="images/img32.jpg" alt="Gallery Image 32">
-    <img src="images/img33.jpg" alt="Gallery Image 33">
-    <img src="images/img34.jpg" alt="Gallery Image 34">
-    <img src="images/img35.jpg" alt="Gallery Image 35">
-    <img src="images/img36.jpg" alt="Gallery Image 36">
-    <img src="images/img37.jpg" alt="Gallery Image 37">
-    <img src="images/img38.jpg" alt="Gallery Image 38">
-    <img src="images/img39.jpg" alt="Gallery Image 39">
-    <img src="images/img40.jpg" alt="Gallery Image 40">
-    <img src="images/img41.jpg" alt="Gallery Image 41">
-    <img src="images/img42.jpg" alt="Gallery Image 42">
-    <img src="images/img43.jpg" alt="Gallery Image 43">
-    <img src="images/img44.jpg" alt="Gallery Image 44">
-    <img src="images/img45.jpg" alt="Gallery Image 45">
-    <img src="images/img46.jpg" alt="Gallery Image 46">
-    <img src="images/img47.jpg" alt="Gallery Image 47">
+    <img src="images/professional-african-businessman-holding-microphone-presenting-generated-by-ai (1).jpg"
+      alt="Gallery Image 31">
+    <img src="images/governmental-hackers-working-computer-network-high-tech-office.jpg" alt="Gallery Image 32">
+    <img src="images/imag.jpg" alt="Gallery Image 33">
+    <img src="images/1738656949-what-to-expect-during-your-first-year-at-nigerian-universities.png" alt="Gallery Image 34">
+    <img src="images/Students.fw_.png" alt="Gallery Image 35">
+    <img src="images/laughing-african-female-student-group-international-students-outdoor-city-137760028.webp" alt="Gallery Image 36">
+    <img src="images/Nigeria-landing-page-hero-1900x1000px.jpg" alt="Gallery Image 37">
+    <img src="images/teacher-helping-teenage-schoolgirl-tablet-260nw-689216878.jpg" alt="Gallery Image 38">
+    <img src="images/istock-1163323528.jpg" alt="Gallery Image 39">
+    <img src="images/front-view-thoughtful-woman-working-with-laptop-library (2).jpg" alt="Gallery Image 41">
+    <img src="images/young-student-working-assignment.jpg" alt="Gallery Image 42">
+    <img src="images/study-group-african-people.jpg" alt="Gallery Image 43">
+    <img src="images/front-view-medical-control-covid19-concept.jpg" alt="Gallery Image 44">
+    <img src="images/group-ten-african-american-people-posed-street-city-fashionable-people-africa-shows-thumb-up.jpg" alt="Gallery Image 45">
+    <img src="images/group-african-doctors-students-near-medical-university-outdoor.jpg" alt="Gallery Image 46">
+    <img
+      src="images/group-five-african-college-students-spending-time-together-campus-university-yard-black-afro-friends-studying-education-theme.jpg"
+      alt="Gallery Image 47">
     <img src="images/e11361bb-e217-49d8-a2b6-d2c5540629cd.png" alt="Gallery Image 48">
     <img src="images/download.jpg" alt="Gallery Image 49">
     <img src="images/bankers_senior_women.jpg" alt="Gallery Image 50">
   </div>
-   <footer style="background:rgb(12, 46, 71);color:white; padding:3rem 5%; font-family:Arial, sans-serif;">
-      <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem;">
+  <footer style="background:rgb(12, 46, 71);color:white; padding:3rem 5%; font-family:Arial, sans-serif;">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem;">
 
-        <!-- About -->
-        <div>
-          <h3 style="font-size:1.2rem; margin-bottom:1rem;">Abigford Open University</h3>
-          <p style="line-height:1.6; font-size:0.95rem;">
-             Abigford Open University is dedicated to removing the barriers that restrict access.
-  </p>
-          </p>
-          <p style="margin-top:1rem; font-size:0.9rem;">📞 +234 804 000 9003</p>
-          <p style="font-size:0.9rem;">📞+234 800 000 0000</p>
-          <p style="font-size:0.9rem;">✉️info@abigforduniversity.edu</p>
-          </p>
-        </div>
-
-        <!-- The University -->
-        <div>
-          <h4 style="margin-bottom:1rem; font-size:1rem;">The University</h4>
-          <p style="line-height:1.8; font-size:0.9rem;">About Us</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Admissions</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Faculties</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Contact Us</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Gallery</p>
-          <p style="line-height:1.8; font-size:0.9rem;">FAQ</p>
-        </div>
-
-        <!-- Studying -->
-        <div>
-          <h4 style="margin-bottom:1rem; font-size:1rem;">Studying</h4>
-          <p style="line-height:1.8; font-size:0.9rem;">Admission Requirements</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Direct Entry Requirements</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Inter-University Transfer</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Scholarship</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Donate</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Apply</p>
-        </div>
-
-        <!-- Digital Learning Tools -->
-        <div>
-          <h4 style="margin-bottom:1rem; font-size:1rem;">Digital Learning Tools</h4>
-          <p style="line-height:1.8; font-size:0.9rem;">E-Library</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Learning Management System (LMS)</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Master of Business Administration (MBA)</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Master of Public Administration (MPA)</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Master of Information Technology (MIT)</p>
-          <p style="line-height:1.8; font-size:0.9rem;">Master of Public Health (MPH)</p>
-        </div>
-
-        <!-- Faculties -->
-        <div>
-          <h4 style="margin-bottom:1rem; font-size:1rem;">Faculties</h4>
-          <p style="line-height:1.8; font-size:0.9rem;">School of Computing</p>
-          <p style="line-height:1.8; font-size:0.9rem;">School of Management and Social Sciences</p>
-          <p style="line-height:1.8; font-size:0.9rem;">School of Communication and Media Studies</p>
-          <p style="line-height:1.8; font-size:0.9rem;">School of Allied Health Sciences</p>
-        </div>
+      <!-- About -->
+      <div>
+        <h3 style="font-size:1.2rem; margin-bottom:1rem;">Abigford Open University</h3>
+        <p style="line-height:1.6; font-size:0.95rem;">
+          Abigford Open University is dedicated to removing the barriers that restrict access.
+        </p>
+        </p>
+        <p style="margin-top:1rem; font-size:0.9rem;">📞 +234 804 000 9003</p>
+        <p style="font-size:0.9rem;">📞+234 800 000 0000</p>
+        <p style="font-size:0.9rem;">✉️info@abigforduniversity.edu</p>
+        </p>
       </div>
 
-      <!-- Bottom Footer -->
-      <div
-        style="text-align:center; margin-top:2rem; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.2); padding-top:1rem;">
-        
-        <p>© 2025. Abiford Education Services Limited. All rights reserved.</p>
-        <p>Terms & Conditions | Privacy Policy</p>
+      <!-- The University -->
+      <div>
+        <h4 style="margin-bottom:1rem; font-size:1rem;">The University</h4>
+        <p style="line-height:1.8; font-size:0.9rem;">About Us</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Admissions</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Faculties</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Contact Us</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Gallery</p>
+        <p style="line-height:1.8; font-size:0.9rem;">FAQ</p>
       </div>
-    </footer>
+
+      <!-- Studying -->
+      <div>
+        <h4 style="margin-bottom:1rem; font-size:1rem;">Studying</h4>
+        <p style="line-height:1.8; font-size:0.9rem;">Admission Requirements</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Direct Entry Requirements</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Inter-University Transfer</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Tuition</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Scholarship</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Donate</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Apply</p>
+      </div>
+
+      <!-- Digital Learning Tools -->
+      <div>
+        <h4 style="margin-bottom:1rem; font-size:1rem;">Digital Learning Tools</h4>
+        <p style="line-height:1.8; font-size:0.9rem;">E-Library</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Learning Management System (LMS)</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Master of Business Administration (MBA)</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Master of Public Administration (MPA)</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Master of Information Technology (MIT)</p>
+        <p style="line-height:1.8; font-size:0.9rem;">Master of Public Health (MPH)</p>
+      </div>
+
+      <!-- Faculties -->
+      <div>
+        <h4 style="margin-bottom:1rem; font-size:1rem;">Faculties</h4>
+        <p style="line-height:1.8; font-size:0.9rem;">School of Computing</p>
+        <p style="line-height:1.8; font-size:0.9rem;">School of Management and Social Sciences</p>
+        <p style="line-height:1.8; font-size:0.9rem;">School of Communication and Media Studies</p>
+        <p style="line-height:1.8; font-size:0.9rem;">School of Allied Health Sciences</p>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div
+      style="text-align:center; margin-top:2rem; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.2); padding-top:1rem;">
+
+      <p>© 2025. Abiford Education Services Limited. All rights reserved.</p>
+      <p>Terms & Conditions | Privacy Policy</p>
+    </div>
+  </footer>
 
 </body>
+
 </html>
